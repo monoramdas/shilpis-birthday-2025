@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/shilpis-birthday-2025/static/css/main.0b54f7b3.css",
+    "main.js": "/shilpis-birthday-2025/static/js/main.81105a21.js",
+    "static/media/logo.svg": "/shilpis-birthday-2025/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/shilpis-birthday-2025/index.html",
+    "main.0b54f7b3.css.map": "/shilpis-birthday-2025/static/css/main.0b54f7b3.css.map",
+    "main.81105a21.js.map": "/shilpis-birthday-2025/static/js/main.81105a21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b54f7b3.css",
+    "static/js/main.81105a21.js"
+  ]
+}
