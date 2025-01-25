@@ -1,0 +1,32 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffebcd;
+}
+
+h1 {
+  color: #ff6347;
+  font-family: 'Arial', sans-serif;
+}
+
+.birthday-message {
+  margin-top: 20px;
+  background-color: #ffe4b5;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #800000;
+}
+
+.countdown {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff4500;
+}
+
+.countdown p {
+  font-size: 1.2rem;
+}
