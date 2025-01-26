@@ -1,12 +1,13 @@
 .app-container {
+  background: url('https://www.transparenttextures.com/patterns/confetti.png'), linear-gradient(to right, #ff9a9e, #fad0c4);
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 20px;
-  /* background-color: #fff; */
   height:100vh;
   color: #5c3c92;
-  background: url('https://www.transparenttextures.com/patterns/confetti.png'), linear-gradient(to right, #ff9a9e, #fad0c4);
+  box-sizing: border-box;
+  overflow:hidden;
 }
 /* 
 h1 {

@@ -14,7 +14,7 @@ const BirthdayCountdown = ({ targetDate }) => {
 
       if (distance < 0) {
         clearInterval(interval);
-        setCountdown("");
+        setCountdown("0");
       } else {
         const days = Math.floor(distance / (1000 * 60 * 60 * 24));
         const hours = Math.floor(
@@ -25,7 +25,7 @@ const BirthdayCountdown = ({ targetDate }) => {
 
         setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
       }
-    }, 8000);
+    }, 1000);
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, [targetDate]);
@@ -34,12 +34,16 @@ const BirthdayCountdown = ({ targetDate }) => {
   const handleButtonClick = () => {
     setButtonClick((prev) => !prev);
     toggleMusic();
+    setIsPlaying(true);
   };
   console.log("buttonClick", buttonClick);
 
   const [isMusicOn, setIsMusicOn] = useState(false);
   const audioRef = useRef(null);
-console.log('audio',audioRef);
+  const [currentSection, setCurrentSection] = useState(1); // Default section to show
+  const [isPlaying, setIsPlaying] = useState(false); // To manage whether the cycle is active
+  const [cycleCount, setCycleCount] = useState(0);
+  
   const toggleMusic = () => {
     if (isMusicOn) {
       audioRef?.current?.pause();
@@ -49,9 +53,7 @@ console.log('audio',audioRef);
     setIsMusicOn(!isMusicOn);
   };
 
-  const [currentSection, setCurrentSection] = useState(1); // Default section to show
-  const [isPlaying, setIsPlaying] = useState(true); // To manage whether the cycle is active
-  const [cycleCount, setCycleCount] = useState(0);
+  
 
   useEffect(() => {
     let interval;
@@ -75,6 +77,7 @@ console.log('audio',audioRef);
     // Cleanup the interval on unmount or when play is toggled off
     return () => clearInterval(interval);
   }, [isPlaying]);
+  console.log("play",isPlaying);
 
   const handlePlayAgain = () => {
     setCycleCount(0); // Reset the cycle count
@@ -84,7 +87,7 @@ console.log('audio',audioRef);
 
   return (
     <div className="birthday-countdown">
-      {countdown !== "" ? (
+      {(countdown !== "0") ? (
         <div className="birthday-countdown__count">
           <h3>Time until your birthday:</h3>
           <p>{countdown}</p>
@@ -111,7 +114,7 @@ console.log('audio',audioRef);
               <div
                 className={`birthday-countdown__play-main-section ${
                   currentSection === 2
-                    ? "birthday-countdown__play-main-section--active"
+                    ? "birthday-countdown__play-main-section2-text"
                     : ""
                 }`}
               >
