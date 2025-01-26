@@ -7,8 +7,8 @@ function App() {
   return (
     <div className="app-container">
       <h1>Happy Birthday!</h1>
-      <BirthdayMessage />
-      <BirthdayCountdown targetDate="2025-01-30T00:00:00" />
+      {/* <BirthdayMessage /> */}
+      <BirthdayCountdown targetDate="2025-01-26T20:58:00" />
     </div>
   );
 }

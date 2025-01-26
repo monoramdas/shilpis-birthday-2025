@@ -1,9 +1,14 @@
 .app-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 20px;
-  background-color: #ffebcd;
+  /* background-color: #fff; */
+  height:100vh;
+  color: #5c3c92;
+  background: url('https://www.transparenttextures.com/patterns/confetti.png'), linear-gradient(to right, #ff9a9e, #fad0c4);
 }
-
+/* 
 h1 {
   color: #ff6347;
   font-family: 'Arial', sans-serif;
@@ -29,4 +34,4 @@ h2 {
 
 .countdown p {
   font-size: 1.2rem;
-}
+} */
